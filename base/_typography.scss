@@ -23,3 +23,13 @@ a {
         text-transform: uppercase;
     }
 }
+.heading-secondary {
+    font-size: 3.5rem;
+    font-weight: 700;
+    background-image: linear-gradient(to right, rgba($color-primary-light,1), rgba($color-primary-dark,1));
+    letter-spacing: 2px;
+    display: inline-block;
+    background-clip:text;
+    color: transparent;
+    text-transform: uppercase;
+}

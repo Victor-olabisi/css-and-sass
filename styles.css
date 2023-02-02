@@ -18,6 +18,10 @@ body {
   line-height: 1.5;
 }
 
+.u-centered-text {
+  text-align: center;
+}
+
 a {
   text-decoration: none;
 }
@@ -40,6 +44,18 @@ a {
   font-size: 700;
   -webkit-animation: moveFromRight 3s ease-in-out;
           animation: moveFromRight 3s ease-in-out;
+  text-transform: uppercase;
+}
+
+.heading-secondary {
+  font-size: 3.5rem;
+  font-weight: 700;
+  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  letter-spacing: 2px;
+  display: inline-block;
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
   text-transform: uppercase;
 }
 
@@ -229,4 +245,10 @@ a {
           animation: slideFromDown 0.5s ease-out 0.75s;
   -webkit-animation-fill-mode: backwards;
           animation-fill-mode: backwards;
+}
+
+.about-section {
+  background-color: #F7F7F7;
+  padding: 25rem 0;
+  margin-top: -20vh;
 }/*# sourceMappingURL=styles.css.map */
