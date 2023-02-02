@@ -1,0 +1,223 @@
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  color: #222;
+  font-size: 1.5rem;
+  padding: 3rem;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header-primary--main {
+  font-size: 6rem;
+  display: block;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 3rem;
+  font: 400;
+  -webkit-animation: moveFromLeft 3s ease-in-out 1;
+          animation: moveFromLeft 3s ease-in-out 1;
+}
+.header-primary--sub {
+  font-size: 2rem;
+  color: white;
+  display: block;
+  letter-spacing: 1.7rem;
+  font-size: 700;
+  -webkit-animation: moveFromRight 3s ease-in-out;
+          animation: moveFromRight 3s ease-in-out;
+  text-transform: uppercase;
+}
+
+@-webkit-keyframes moveFromLeft {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(20px);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+
+@keyframes moveFromLeft {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(20px);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes moveFromRight {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(-20px);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+@keyframes moveFromRight {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(-20px);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes slideFromDown {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+@keyframes slideFromDown {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+.header {
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.7), rgba(40, 180, 133, 0.7)), url("../img/hero.jpg");
+  height: 90vh;
+  position: relative;
+  clip-path: polygon(0 0, 100%, 0, 100% 75vh, 0 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
+.header__logo {
+  position: absolute;
+  top: 4rem;
+  left: 4rem;
+  height: 3.5rem;
+}
+.header__banner {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.row {
+  max-width: 114rem;
+  margin: 0 auto;
+  background-color: #eee;
+}
+.row:not(:last-child) {
+  margin-bottom: 8rem;
+}
+.row::after {
+  display: table;
+  clear: both;
+  content: " ";
+}
+.row [class^=col-] {
+  background-color: orangered;
+  float: left;
+}
+.row [class^=col-]:not(:last-child) {
+  margin-right: 6rem;
+}
+.row .col-1-0f-2 {
+  width: calc((100% - 6rem) / 3);
+}
+.row .col-1-of-3 {
+  width: calc((100% - 2 * 6rem) / 3);
+}
+.row .col-1-of-4 {
+  width: calc((100% - 3 * 6rem) / 4);
+}
+
+.btn, .btn:link, .btn:visited {
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  margin-top: 6rem;
+  font-size: 1.6rem;
+  border-radius: 3rem;
+  outline: none;
+  border: none;
+  text-transform: uppercase;
+  color: #777777;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  position: relative;
+}
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+.btn::after {
+  content: " ";
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 3rem;
+  z-index: -1;
+  transition: all 0.4s ease;
+}
+.btn--white::after {
+  background: white;
+}
+.btn--white {
+  background: white;
+}
+.btn--animated {
+  -webkit-animation: slideFromDown 0.5s ease-out 0.75s;
+          animation: slideFromDown 0.5s ease-out 0.75s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+}/*# sourceMappingURL=styles.css.map */
