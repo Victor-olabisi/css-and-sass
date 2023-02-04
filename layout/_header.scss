@@ -3,6 +3,8 @@
      rgba($color-primary-light, 0.7),
     rgba($color-primary-dark,0.7)),
      url("../img/hero.jpg");
+     background-size: cover;
+     background-position: top;
     height: 90vh;
     position: relative;
     clip-path: polygon(0 0, 100%, 0, 100% 75vh, 0 100%);

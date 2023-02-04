@@ -1,0 +1,23 @@
+ .feature {
+    font-size: 1.5rem;
+    padding: 2.5rem;
+    background-color: rgba($color-white,0.8);
+    text-align: center;
+    box-shadow: 0 1.5rem 4rem rgba($color-dark,0.4);
+    transition: $transition;
+    &__icon {
+        font-size: 6rem;
+        background-image: linear-gradient( 
+             rgba($color-primary-light, 1),
+             rgba($color-primary-dark,1));
+       background-clip: text;
+       display: inline-block;   
+       color: transparent;   
+    }
+    &:hover {
+        transform: translateY(-1.5rem);
+    }
+    &__text,& h3 {
+        font-size: 1.5rem;
+    }
+ }
