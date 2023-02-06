@@ -6,7 +6,13 @@ $color-black:#2222;
 $color-white:#fff;
 $color-dark:#0000;
 
-$transition :all 0.4s ease;
+$color-secondary-light:#ffb900;
+$color-secondary-dark:#ff7730;
+
+$color-tertiary-light:#299bff;
+$color-tertiary-dark:#5643fa;
+
+$transition :all 0.4s ease-in-out;
 
 // GRID
 $grid-width :114rem;

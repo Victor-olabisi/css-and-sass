@@ -10,7 +10,7 @@
     outline: none;
     border: none;
     text-transform: uppercase;
-    color: #777777;
+    // color: #777777;
     cursor: pointer;
     transition: $transition;
     position: relative;
@@ -48,6 +48,15 @@
 
     &--white {
         background: white;
+    }
+      &--green::after {
+            background: $color-primary;
+            color: white;
+        }
+
+    &--green {
+        background: $color-primary;
+        color: white;
     }
     &--animated {
         animation: slideFromDown .5s ease-out .75s;
