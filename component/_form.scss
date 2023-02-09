@@ -38,5 +38,48 @@
        font-size: 1.2rem;
        display: block;
        margin-top: 0.7rem;
+       
     }
+    &__radio-group {
+        width: 49%;
+        display: inline-block;
+        font-size: $default-font-size;
+        
+    }
+    &__radio-input {
+        display: none;
+    }
+    &__radio-label {
+        position: relative;
+        padding-left: 4.5rem;
+        cursor: pointer;
+    }
+
+    &__radio-button {
+            height: 3rem;
+            width: 3rem;
+            border-radius: 50%;
+            border: 5px solid $color-primary;
+            display: inline-block;
+            position: absolute;
+            top:-.4rem;
+            left: 0;
+            &::after {
+                content: " ";
+                display: block;
+                height: 1.3rem;
+                width: 1.3rem;
+                border-radius: 50%;
+                background-color: $color-primary;
+                position: absolute;
+                top: 50%;
+                left:50%;
+                transform: translate(-50%, -50%);
+                opacity: 0;
+                transition: opacity 0.3s;
+            }
+        }
+        &__radio-input:checked + &__radio-label &__radio-button::after {
+            opacity: 1;
+        }
 }
