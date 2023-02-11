@@ -3,9 +3,15 @@
     padding: 10rem 0;
     color: #f7f7f7;
     font-size: 1.4rem;
+    @include respond(tab-port){
+        padding: 8rem;
+    }
     &__logo-box {
      text-align: center;
      margin-bottom: 8rem;
+       @include respond(tab-port){
+            margin-bottom: 6rem;
+        }
     }
     &__footer-logo {
          width: 15rem;
@@ -24,6 +30,10 @@
     &__navigation {
         border-top: 2px solid #7777;
         display: inline-block;
+        @include respond(tab-port){
+            width: 100%;
+            text-align: center;
+        }
     }
    
     &__item {
@@ -33,9 +43,7 @@
         text-transform: uppercase;
         display: inline-block;
         transition: $transition;
-        margin-top: 2rem;
-      
-       
+        margin-top: 2rem; 
     }
          &:hover,
          &:active {
@@ -47,8 +55,13 @@
     &__text {
         color: inherit;
         letter-spacing: 1px;
+        width: 78%;
         border-top: 2px solid #7777;
         padding-top: 2rem;
-        display: inline-block;
+         @include respond(tab-port){
+            width: 100%;
+            float: none;
+            padding-bottom: 0;
+        }
     }
 }

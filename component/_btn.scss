@@ -58,6 +58,9 @@
     &--green {
         background: $color-primary;
         color: white;
+          @include respond(tab-port){
+        margin-top: 0rem !important;
+    }
     }
     &--animated {
         animation: slideFromDown .5s ease-out .75s;
