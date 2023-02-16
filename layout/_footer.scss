@@ -3,6 +3,7 @@
     padding: 10rem 0;
     color: #f7f7f7;
     font-size: 1.4rem;
+    text-align: center;
     @include respond(tab-port){
         padding: 8rem;
     }
@@ -58,10 +59,13 @@
         width: 78%;
         border-top: 2px solid #7777;
         padding-top: 2rem;
+        margin: 0 auto;
          @include respond(tab-port){
-            width: 100%;
+            width: 50%;
+            margin: 0 auto;
             float: none;
             padding-bottom: 0;
         }
     }
+  
 }

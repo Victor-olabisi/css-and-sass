@@ -1,59 +1,107 @@
-.row {
-    max-width: $grid-width;
+
+%grid-center{
+   display: grid;
+   column-gap: $gutter-horizontal;
+   row-gap: 4rem;
+   justify-content: center;
+}
+.section-center {
+    max-width: 114rem;
     margin: 0 auto;
-       @include respond(tab-port){
-        max-width: 50rem ;
-        padding: 0 3rem;
-    }
-   
-    &:not(:last-child) {
-     margin-bottom: $gutter-vertical;
-       @include respond(tab-port){
-        margin-bottom: 6rem
-    }
-    }
-  
-    @include clearfix;
-
-
-    [class^="col-"] {
-        float: left;
-        &:not(:last-child) {
-            margin-right: $gutter-horizontal;
-
-        }
-
-      @include respond(tab-port){
-        width: 100% !important;
-        margin-right: 0;
-        margin-bottom: 6rem;
-      }
-    }
-
-    .col-1-of-2 {
-        width: calc((100% - #{$gutter-horizontal}) / 2);
-        
-    }
-
-    .col-1-of-3 {
-        width: calc((100% - 2 * #{$gutter-horizontal}) / 3);
-    }
-
-    .col-2-of-3 {
-        width: calc(2 * ((100% - 2 * #{$gutter-horizontal}) / 3) + #{$gutter-horizontal});
-    }
-
-    .col-1-of-4 {
-        width: calc((100% - 3 * #{$gutter-horizontal}) / 4);
-    }
-
-    .col-2-of-4 {
-        width: calc(2 * ((100% - 3 * #{$gutter-horizontal}) / 4) + #{$gutter-horizontal});
-    }
-
-    .col-3-of-4 {
-        width: calc(3 * ((100% - 3 * #{$gutter-horizontal}) / 4) + 2 * #{$gutter-horizontal});
-    }
-
 
 }
+
+.grid-row {
+   @extend %grid-center;
+   grid-template-columns: repeat(auto-fill,minmax(24rem, 1fr));
+   @include respond(tab-land){
+    padding: 0 3rem;
+   }
+   
+}
+.card-center {
+   @extend %grid-center;
+    grid-template-columns: repeat(auto-fill, minmax(34rem, 1fr));
+    @include respond(tab-land) {
+        padding: 0 3rem;
+    }
+}
+.about-center {
+    @extend %grid-center;
+    grid-template-columns: repeat(auto-fill,minmax(54rem, 1fr));
+    @include respond(tab-land) {
+        padding-right: 9rem;
+         margin-bottom: 40rem;
+    }
+}
+.footer-center {
+    @extend %grid-center;
+    grid-template-columns: repeat(auto-fit,minmax(54rem, 1fr));
+}
+.story-center {
+    display: grid;
+    grid-template-rows: 1fr;
+    row-gap: 4rem;
+    justify-content: center;
+      @include respond(phone) {
+        padding: 0 7rem;
+    }
+}
+// .row {
+//     // width: 95vw;
+//     max-width: 114rem;
+//     margin: 0 auto;
+//        @include respond(tab-port){
+//         max-width: 50rem ;
+//         padding: 0 3rem;
+//     }
+   
+//     &:not(:last-child) {
+//      margin-bottom: $gutter-vertical;
+//        @include respond(tab-port){
+//         margin-bottom: 6rem
+//     }
+//     }
+  
+//     @include clearfix;
+
+
+//     [class^="col-"] {
+//         float: left;
+//         &:not(:last-child) {
+//             margin-right: $gutter-horizontal;
+
+//         }
+//         @include respond(tab-port){
+//             width: 100% !important;
+//             margin-bottom: 6rem;
+            
+//         }
+//     }
+
+//     .col-1-of-2 {
+//         width: calc((100% - #{$gutter-horizontal}) / 2);
+        
+//     }
+
+//     .col-1-of-3 {
+//         width: calc((100% - 2 * #{$gutter-horizontal}) / 3);
+//     }
+
+//     .col-2-of-3 {
+//         width: calc(2 * ((100% - 2 * #{$gutter-horizontal}) / 3) + #{$gutter-horizontal});
+//     }
+
+//     .col-1-of-4 {
+//         width: calc((100% - 3 * #{$gutter-horizontal}) / 4);
+//     }
+
+//     .col-2-of-4 {
+//         width: calc(2 * ((100% - 3 * #{$gutter-horizontal}) / 4) + #{$gutter-horizontal});
+//     }
+
+//     .col-3-of-4 {
+//         width: calc(3 * ((100% - 3 * #{$gutter-horizontal}) / 4) + 2 * #{$gutter-horizontal});
+//     }
+
+// }

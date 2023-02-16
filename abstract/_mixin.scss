@@ -1,5 +1,6 @@
 @mixin clearfix {
-    &::after {
+    &::after,
+    &::before {
         display: table;
         clear: both;
         content: " ";
@@ -12,7 +13,7 @@
     }
 }
     @if ($breakpoint==tab-port){
-        @media (max-width:900px) {
+        @media (max-width:56em) {
             @content
         }
     }
