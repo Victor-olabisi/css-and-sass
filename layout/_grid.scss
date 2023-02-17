@@ -4,12 +4,14 @@
    column-gap: $gutter-horizontal;
    row-gap: 4rem;
    justify-content: center;
+//    overflow: hidden;
 }
 .section-center {
     max-width: 114rem;
     margin: 0 auto;
-
+    // width: 9vw;
 }
+
 
 .grid-row {
    @extend %grid-center;
@@ -30,8 +32,8 @@
     @extend %grid-center;
     grid-template-columns: repeat(auto-fill,minmax(54rem, 1fr));
     @include respond(tab-land) {
-        padding-right: 9rem;
-         margin-bottom: 40rem;
+        // padding-right: 9rem;
+        //  margin-bottom: 40rem;
     }
 }
 .footer-center {

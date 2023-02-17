@@ -35,6 +35,12 @@
         transform:translateX(-3rem) skewX(0);
         
     }
+    @media screen and (max-width:576px){
+        shape-outside: none;
+        float: none;
+        margin: 0 auto;
+        margin-bottom: 2rem;
+    }
    }
    &__image {
     height: 100%;

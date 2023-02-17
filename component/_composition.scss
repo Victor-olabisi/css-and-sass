@@ -4,41 +4,44 @@
     &__photo {
         width: 55%;
         box-shadow: 0 1.5rem 4rem rgba($color-black,0.4);
+         margin: 0 auto;
         position: absolute;
         border-radius: 3px;
         transition: $transition;
         outline-offset: 2rem;
         z-index: 0;
-          @include respond(tab-land){
+          @media screen and (max-width:1026px){
          float: left;
-         width: 33.3333%; 
-         box-shadow: 0 1.5rem 4rem rgba($color-black,0.4);
+         display: block;
+         width: 28%; 
+         box-shadow: 0 1.5rem 3rem rgba($color-black,0.2);
          position: relative;
           }
         &--p1 {
             left: 0;
             top: -2rem;
-                @include respond(tab-port){
+                 @media screen and (max-width:1026px){
                     top: 0;
-                    left: 0;
-                      transform: scale(1.3);
+                    transform: scale(1.3);
                 }
         }
         &--p2 {
             right: 0;
             top: 2rem;
-               @include respond(tab-port){
+               @media screen and (max-width:1026px){
                     top: -1rem;
                     left: 0;
                     transform: scale(1.3);
+                    z-index: 1;
                 }
         }
         &--p3 {
             left: 20%;
             top: 10rem;
-               @include respond(tab-port){
-                    top: 0;
-                    left: 40%;
+               @media screen and (max-width:1026px){
+                    top: 1rem;
+                    left: 0;
+                    transform: scale(1.1);
                 }
         }
         &:hover {
